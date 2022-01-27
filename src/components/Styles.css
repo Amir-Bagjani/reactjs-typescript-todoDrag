@@ -1,0 +1,124 @@
+.form {
+  display: flex;
+  width: 97%;
+  position: relative;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.76);
+}
+.active-tasks{
+  font-size: 30px;color: white;
+}
+.container{
+  display: flex;
+  width: 95%;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.input:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.input-submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50%;
+  right: 0;
+  border: none;
+  font-size: 15px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+}
+.input-submit:hover {
+  background-color: #388aa2;
+}
+.input-submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 47.5%;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #388aa2;
+  border-radius: 10px;
+margin: 0 5px;
+}
+.active-drag{
+  background-color: #3889a288;
+}
+
+.todos-single {
+  display: flex;
+  min-width: 250px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: #bd081c;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+.todos-single:hover{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.588);
+  transform: scale(1.02);
+
+}
+
+.icon {
+  color: white;
+  cursor: pointer;
+  margin: 0 3px;
+}
+.todos-single-text {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  
+}
+.input-single-todo {
+  width: 60%;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px 27px 10px 10px;
+  flex: 1.5;
+}
+.tick-icon{
+  position: relative;
+  left: -27px;
+  cursor: pointer;
+  color: #bd081c;
+  z-index: 999;
+}
+.remove{
+  background-color: chocolate;
+}
+.active-drop{
+  background-color: rgba(210, 105, 30, 0.781);
+}
+@media (max-width: 600px){
+  .container{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .todos{
+    width: 90%;
+  }
+}
